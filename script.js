@@ -9,8 +9,6 @@ let messageBirth = "Hello World"
 let messageEgg= "Qu'est-ce qui est apparu en premier : l'œuf ou la poule ?"
 
 
-ageEntrer = document.getElementById('age').value;
-
 
 
 
@@ -20,23 +18,18 @@ document.getElementById("button").addEventListener("click", function (e) {
 
     
 
-    
+    ageEntrer = document.getElementById('age').value;
 
     //Secondes
     if (document.getElementById('inputSecondes').checked){
         if (ageEntrer < 122 && ageEntrer > 0 ){
+            let secondsAge = ageEntrer * 60 * 60 * 24 * 365;
+            let ageSpace = secondsAge.toLocaleString()
 
-            function numberWithSpaces(seconds) {
-                var seconds = ageEntrer * 60 * 60 * 24 * 365;
-                spaceNum = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                let age = document.getElementById("result").innerHTML = spaceNum;
-                console.log(age);
-                
-            }
-            console.log(ageEntrer);
-            
-
-            
+            console.log(ageSpace);
+            let age = document.getElementById("result").innerHTML = ageSpace;
+               
+           
         }
 
         if (ageEntrer == 0 ){
