@@ -17,12 +17,12 @@ document.getElementById("button").addEventListener("click", function (e) {
     //Secondes
     if (document.getElementById('inputSecondes').checked) {
         if (ageEntrer < 122 && ageEntrer > 0) {
+
             let secondsAge = ageEntrer * 60 * 60 * 24 * 365;
             let ageSpace = secondsAge.toLocaleString()
 
             console.log(ageSpace);
-            let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de secondes.";
-
+            let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de secondes au compteur.";
 
         }
 
@@ -45,8 +45,18 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = minutesAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de minutes.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de minutes au compteur.";
 
+        if (ageEntrer == 0) {
+            let age = document.getElementById("result").innerHTML = messageBirth
+        }
+        if (ageEntrer > 121) {
+            let age = document.getElementById("result").innerHTML = messageDoyen
+        }
+
+        if (ageEntrer < 0) {
+            let age = document.getElementById("result").innerHTML = messageEgg
+        }
 
     }
 
@@ -56,8 +66,18 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = hourAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " d'heures.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " d'heures au compteur.";
 
+        if (ageEntrer == 0) {
+            let age = document.getElementById("result").innerHTML = messageBirth
+        }
+        if (ageEntrer > 121) {
+            let age = document.getElementById("result").innerHTML = messageDoyen
+        }
+
+        if (ageEntrer < 0) {
+            let age = document.getElementById("result").innerHTML = messageEgg
+        }
     }
 
     //jours
@@ -66,8 +86,18 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = daysAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de jours.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de jours au compteur.";
 
+        if (ageEntrer == 0) {
+            let age = document.getElementById("result").innerHTML = messageBirth
+        }
+        if (ageEntrer > 121) {
+            let age = document.getElementById("result").innerHTML = messageDoyen
+        }
+
+        if (ageEntrer < 0) {
+            let age = document.getElementById("result").innerHTML = messageEgg
+        }
     }
 
 });
