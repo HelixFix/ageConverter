@@ -56,7 +56,7 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = hourAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de heures.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " d'heures.";
 
     }
 
