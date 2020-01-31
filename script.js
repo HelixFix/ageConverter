@@ -4,15 +4,23 @@ console.log(inputSecondes);
 console.log(button);
 
 
-ageEntrer = document.getElementById('age').value;
+let messageError = "Que je sache l'âge de la personne la plus âgée ayant existé a ce jour avait 121 ans";
+
+
 
 document.getElementById("button").addEventListener("click", function (e) {
     e.preventDefault();
 
+    ageEntrer = document.getElementById('age').value;
+
     //Secondes
     if (document.getElementById('inputSecondes').checked){
-        
-        let age = document.getElementById("result").innerHTML = ageEntrer * 60 * 60 * 24 * 365;
+        if (ageEntrer < 122 ){
+            let age = document.getElementById("result").innerHTML = ageEntrer * 60 * 60 * 24 * 365;
+        }
+        else {
+            let age = document.getElementById("result").innerHTML = messageError
+        }
     }
 
 
