@@ -21,7 +21,7 @@ document.getElementById("button").addEventListener("click", function (e) {
             let ageSpace = secondsAge.toLocaleString()
 
             console.log(ageSpace);
-            let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " secondes.";
+            let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de secondes.";
 
 
         }
@@ -45,7 +45,7 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = minutesAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " minutes.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de minutes.";
 
 
     }
@@ -56,7 +56,7 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = hourAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " heures.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de heures.";
 
     }
 
@@ -66,7 +66,7 @@ document.getElementById("button").addEventListener("click", function (e) {
         let ageSpace = daysAge.toLocaleString()
 
         console.log(ageSpace);
-        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " jours.";
+        let age = document.getElementById("result").innerHTML = "Vous avez " + ageSpace + " de jours.";
 
     }
 
