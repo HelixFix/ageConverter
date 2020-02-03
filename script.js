@@ -4,9 +4,9 @@ console.log(inputSecondes);
 console.log(button);
 
 
-let messageDoyen = "Que je sache la personne la plus âgée ayant existé a ce jour avait 121 ans";
-let messageBirth = "Hello World"
-let messageEgg = "Qu'est-ce qui est apparu en premier : l'œuf ou la poule ?"
+const messageDoyen = "Que je sache la personne la plus âgée ayant existé a ce jour avait 121 ans";
+const messageBirth = "Hello World"
+const messageEgg = "Qu'est-ce qui est apparu en premier : l'œuf ou la poule ?"
 
 document.getElementById("button").addEventListener("click", function (e) {
     e.preventDefault();
