@@ -8,6 +8,7 @@ const messageDoyen = "Que je sache la personne la plus âgée ayant existé a ce
 const messageBirth = "Hello World"
 const messageEgg = "Qu'est-ce qui est apparu en premier : l'œuf ou la poule ?"
 
+
 document.getElementById("button").addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -24,6 +25,37 @@ document.getElementById("button").addEventListener("click", function (e) {
     console.log(range);
 
 
+    // calcul année bissextile
+
+    function leap_year_range(st_year, end_year) {
+        var year_range = [];
+        for (var i = st_year; i <= end_year; i++) {
+            year_range.push(i);
+        }
+        var new_array = [];
+
+        year_range.forEach(
+            function (year) {
+                if (test_LeapYear(year))
+                    new_array.push(year);
+            });
+
+        return "Félicitation vous avez survécu à " + new_array.length + " année(s) bissextile";
+        
+    }
+
+    function test_LeapYear(year) {
+        if ((year % 4 === 0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 === 0)) {
+            return year;
+        } else {
+            return false;
+        }
+    }
+
+    console.log(leap_year_range(range,curYear));
+   
+ 
+   
 
     //Secondes
     if (document.getElementById('inputSecondes').checked) {
