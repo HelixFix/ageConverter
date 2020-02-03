@@ -14,6 +14,17 @@ document.getElementById("button").addEventListener("click", function (e) {
 
     ageEntrer = document.getElementById('age').value;
 
+    let curDate = new Date();
+
+    let curYear = curDate.getFullYear();
+    let range = curYear - ageEntrer;
+
+
+    console.log(curYear);
+    console.log(range);
+
+
+
     //Secondes
     if (document.getElementById('inputSecondes').checked) {
         if (ageEntrer < 122 && ageEntrer > 0) {
